@@ -1,0 +1,53 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "News OpenAPI",
+        "contact": {
+            "email": "eray@bahadir.me"
+        },
+        "version": "0.0.1"
+    },
+    "paths": {
+        "/api/news": {
+            "get": {
+                "tags": [
+                    "news"
+                ],
+                "operationId": "getNewsList",
+                "responses": {
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/api/news/{id}": {
+            "get": {
+                "tags": [
+                    "news"
+                ],
+                "operationId": "getNewsList",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of news that needs to be listed",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
